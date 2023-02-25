@@ -9,7 +9,7 @@ Using vite to run the server and capacitor to contain the code so that it works 
 
 To run the provided example, you can use `npm run dev` command.
 
-Or build it using `npm run build` and run it using `npm run start`
+Or build it using `npm run build` and run it using `npm run preview`
 
 ### How to compile it for android?
 
