@@ -1,0 +1,11 @@
+{
+  "appId": "com.htmlmobile.app",
+  "appName": "HTML Mobile",
+  "bundledWebRuntime": false,
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}

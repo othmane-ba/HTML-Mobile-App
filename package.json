@@ -1,0 +1,28 @@
+{
+  "name": "html-mobile",
+  "version": "1.0.0",
+  "description": "An HTML Mobile App",
+  "main": "index.js",
+  "keywords": [
+    "html",
+    "mobile"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@capacitor/android": "^4.7.0",
+    "@capacitor/camera": "latest",
+    "@capacitor/core": "latest",
+    "@capacitor/ios": "^4.7.0",
+    "@capacitor/splash-screen": "latest"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "latest",
+    "vite": "^2.9.13"
+  },
+  "author": "",
+  "license": "ISC"
+}

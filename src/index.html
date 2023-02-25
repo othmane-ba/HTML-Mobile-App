@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML Mobile App</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
+    ></script>
+
+    <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div>
+      <main>
+      <h1>HTML Mobile App</h1>
+        <span>
+          Well it's just HTML and you can install it on your phone so... 
+        </span>
+        
+        <p>
+          <img id="image" style="max-width: 100%">
+        </p>
+        <div style='position:absolute;bottom:0;text-align:center;width: -webkit-fill-available;'>
+        <h2>Camera</h2>
+        <p>
+          You can use camera too!<br/>
+          Say cheese
+        </p>
+        <p>
+          <button class="button" id="take-photo">Take Photo</button>
+        </p>
+        </div>
+      </main>
+    </div>
+
+    <script type="module">
+      import { Camera } from '@capacitor/camera';
+      
+      document.querySelector('#take-photo').addEventListener('click', async function (e) {
+        try {
+          const photo = await Camera.getPhoto({
+            resultType: 'uri',
+          });
+
+          const image = document.querySelector('#image');
+          if (!image) {
+            return;
+          }
+
+          image.src = photo.webPath;
+        } catch (e) {
+          console.warn('User cancelled', e);
+        }
+      });
+    </script>
+  </body>
+</html>
