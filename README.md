@@ -1,7 +1,7 @@
-## HTML Mobile A
+## HTML Mobile App
 
 This app was created using [`@capacitor/create-app`](https://github.com/ionic-team/create-capacitor-app),
-It's not just a raw html because it's impossible "yet" but it does the work
+It's not just a raw html project because it's impossible "yet" but it does the work
 
 Using vite to run the server and capacitor contain the code so that it works on mobile phones
 
